@@ -18,7 +18,7 @@ default_generation_config = {
 }
 
 # Function to create a generative model
-def create_model(model_name="gemini-1.5-flash", generation_config=default_generation_config, system_instruction="You are an office employee and your job is to convert texts into a CSV form text. The second row data should correspond to the first row, therefor use inverted commas to denote corresponding dataset if you find multiple datas."):
+def create_model(model_name="gemini-1.5-flash", generation_config=default_generation_config, system_instruction="You are an office employee and your job is to convert texts into a python dictionary format. The second row data should correspond to the first row, therefor use inverted commas to denote corresponding dataset if you find multiple datas. Use doble quotation mark. Dont give the formated string in md"):
     return genai.GenerativeModel(
         model_name=model_name,
         generation_config=generation_config,
